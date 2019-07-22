@@ -25,3 +25,35 @@ window.addEventListener('keydown', (event) => {
 })
 
 
+//////zoom on images with mouse wheel/////
+const content = document.querySelector("card");
+window.addEventListener('wheel', (event) => {
+    if (event.target.tagName === "IMG") {
+        function zoom(event) {
+            event.preventDefault();
+
+            scale += event.deltaY * -0.001;
+
+            // Restrict scale
+            scale = Math.min(Math.max(.125, scale), 4);
+            if(scale < 1){
+                scale = 1;
+            }
+            // Apply scale transform
+            event.target.style.transform = `scale(${scale})`;
+            console.log(scale);
+        }
+
+        let scale = 1;
+        event.target.onwheel = zoom;
+    }
+})
+
+
+
+
+
+
+
+
+
