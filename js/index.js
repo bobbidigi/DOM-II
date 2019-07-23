@@ -65,7 +65,6 @@ function drop(ev) {
 //// load function ///////
 
 window.addEventListener('load', (event) => {
-    console.log('page is fully loaded', event.target.body);
     event.target.body.classList.add('bodyAnimation');
     setTimeout(function () {
         event.target.body.classList.remove("bodyAnimation");
@@ -119,5 +118,12 @@ destItems.addEventListener('dblclick', function (e) {
 
 
 
+/////////  focus function  //////////
+const nav = document.querySelectorAll(".nav-link");
 
-
+nav.forEach(function(item){
+    item.addEventListener("focus", myFunction);
+})
+function myFunction() {
+    this.style.textDecoration = "underline";
+}
