@@ -46,7 +46,7 @@ window.addEventListener('wheel', (event) => {
     }
 })
 
-////// drag and drop w3image /////
+////// drag and drop destination /////
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -77,8 +77,6 @@ window.addEventListener('load', (event) => {
 // const widthOutput = document.querySelector('#width');
 const dragSection = document.querySelector(".drag-destinations");
 function reportWindowSize() {
-    console.log(window.innerHeight);
-    console.log(window.innerWidth);
     if(window.innerWidth < 800){
         dragSection.style.display = "none";
     }
@@ -104,6 +102,33 @@ window.addEventListener('scroll', (event) => {
     }
     
 })
+
+
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    )
+}
+
+var docheight = getDocHeight()
+
+function amountscrolled() {
+    var winheight = window.innerHeight || (document.documentElement || document.body).clientHeight
+    var docheight = getDocHeight()
+    var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+    var trackLength = docheight - winheight
+    var pctScrolled = Math.floor(scrollTop / trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    console.log(pctScrolled + '% scrolled')
+}
+
+window.addEventListener("scroll", function () {
+    amountscrolled()
+}, false)
+
+
 
 
 //////// double click destination items ////////////////
