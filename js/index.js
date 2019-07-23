@@ -152,3 +152,9 @@ nav.forEach(function(item){
 function myFunction() {
     this.style.textDecoration = "underline";
 }
+
+
+TweenMax.to("#logo", 3, {
+    x: 100,
+    background: "#ff0"
+});
