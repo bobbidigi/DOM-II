@@ -81,12 +81,27 @@
       </div>
     </section>
 
-    <p>Drag the W3Schools image into the rectangle:</p>
+    <!-- //drag and drop -->
 
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <br>
-    <img id="drag1" src="https://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)"
-      width="336" height="69">
+    <section class="drag-destinations">
+      <h2>Drag your destination into the rectangle:</h2>
+      <div class="drag-container">
+        <div id="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="destination-items">
+          <h3 id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69">Fun In The Sun</h3>
+          <h3 id="drag2" draggable="true" ondragstart="drag(event)" width="336" height="69">Mountain Excursion</h3>
+          <h3 id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69">Island Getaway</h3>
+        </div>
+      </div>  
+    </section>
+
+    
+    <!-- <img id="drag1" src="https://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)"
+      width="336" height="69"> -->
+
+      
+
+
   </div><!-- container -->
 
   <footer class="footer">

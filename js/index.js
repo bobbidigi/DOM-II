@@ -31,9 +31,7 @@ window.addEventListener('wheel', (event) => {
     if (event.target.tagName === "IMG") {
         function zoom(event) {
             event.preventDefault();
-
             scale += event.deltaY * -0.001;
-
             // Restrict scale
             scale = Math.min(Math.max(.125, scale), 4);
             if(scale < 1){
@@ -41,7 +39,6 @@ window.addEventListener('wheel', (event) => {
             }
             // Apply scale transform
             event.target.style.transform = `scale(${scale})`;
-            console.log(scale);
         }
 
         let scale = 1;
@@ -50,7 +47,6 @@ window.addEventListener('wheel', (event) => {
 })
 
 ////// drag and drop w3image /////
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -65,6 +61,15 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
+//// load function ///////
+
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded', event.target.body);
+    event.target.body.classList.add('bodyAnimation');
+    setTimeout(function () {
+        event.target.body.classList.remove("bodyAnimation");
+    }, 3000);
+});
 
 
 
