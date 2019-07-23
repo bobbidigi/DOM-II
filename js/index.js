@@ -54,11 +54,12 @@ function allowDrop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
-
+const plus = document.querySelector(".plus")
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
+    plus.style.display = "none";
 }
 
 //// load function ///////
@@ -88,6 +89,24 @@ function reportWindowSize() {
 }
 
 window.onresize = reportWindowSize;
+
+
+
+////////// scroll event ////////////
+
+window.addEventListener('scroll', (event) => {
+    // console.log(event.target.body)
+    if (event.target.body.classList.contains('bodyAnimation')) {
+        console.log("has class");
+    }else{
+        console.log("needs class");
+        event.target.body.classList.add('bodyAnimation');
+        setTimeout(function () {
+            event.target.body.classList.remove("bodyAnimation");
+        }, 5000);
+    }
+    
+})
 
 
 

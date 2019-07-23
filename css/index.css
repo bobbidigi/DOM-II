@@ -436,11 +436,20 @@ img {
   align-items: center;
 }
 .home .drag-destinations .drag-container #drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   width: 50%;
   height: 50vh;
   padding: 10px;
   border: 2px dashed #17A2B8;
+}
+.home .drag-destinations .drag-container #drop h1 {
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
 }
 .home .drag-destinations .drag-container .destination-items {
   width: 50%;
