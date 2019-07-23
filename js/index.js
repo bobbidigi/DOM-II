@@ -97,9 +97,7 @@ window.onresize = reportWindowSize;
 window.addEventListener('scroll', (event) => {
     // console.log(event.target.body)
     if (event.target.body.classList.contains('bodyAnimation')) {
-        console.log("has class");
     }else{
-        console.log("needs class");
         event.target.body.classList.add('bodyAnimation');
         setTimeout(function () {
             event.target.body.classList.remove("bodyAnimation");
@@ -107,6 +105,17 @@ window.addEventListener('scroll', (event) => {
     }
     
 })
+
+
+//////// double click destination items ////////////////
+
+const destItems = document.querySelector('.destination-items');
+
+destItems.addEventListener('dblclick', function (e) {
+    if(e.target.classList.contains("dest")){
+        e.target.classList.toggle('large');
+    }    
+});
 
 
 
