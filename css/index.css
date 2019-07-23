@@ -421,3 +421,9 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.home #div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
