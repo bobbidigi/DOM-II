@@ -71,6 +71,23 @@ window.addEventListener('load', (event) => {
     }, 3000);
 });
 
+///////// resize event /////////////
+
+// const heightOutput = document.querySelector('#height');
+// const widthOutput = document.querySelector('#width');
+const dragSection = document.querySelector(".drag-destinations");
+function reportWindowSize() {
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+    if(window.innerWidth < 800){
+        dragSection.style.display = "none";
+    }
+    if(window.innerWidth > 800){
+        dragSection.style.display = "block";
+    }
+}
+
+window.onresize = reportWindowSize;
 
 
 
