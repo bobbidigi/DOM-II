@@ -39,6 +39,16 @@ blocks.addEventListener('mouseup', (e) =>{
   traveling = false;
 })
 
+// On click, moves the block clicked to the top
+let rockets = document.querySelectorAll('.block');
+rockets.forEach(moveUp => moveUp.addEventListener('click', (event) => {
+  if (event = event.target.style.order = '') {
+    event.target.style.order = 1;
+  } else {
+    rockets.forEach(upOne => upOne.style.order += 1);
+  }
+}))
+
 
 
 
