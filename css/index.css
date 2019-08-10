@@ -451,15 +451,7 @@ img {
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
 }
-.home .drag-destinations .drag-container .destination-items {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-.home .drag-destinations .drag-container .destination-items h3 {
+.home .drag-destinations .drag-container h3 {
   padding: 0.8rem;
   margin: 0.45rem;
   font-size: 1.8rem;
@@ -472,6 +464,14 @@ img {
   border: 0.5px solid #ccc;
   border-radius: 10px;
   box-shadow: 1px 1px 5px #000;
+}
+.home .drag-destinations .drag-container .destination-items {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 .home .drag-destinations .drag-container .destination-items .large {
   transform: scale(1.3);

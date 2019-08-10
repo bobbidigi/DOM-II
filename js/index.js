@@ -58,7 +58,11 @@ const plus = document.querySelector(".plus")
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    if(ev.target.classList.contains('plus')){
+        ev.target.parentNode.appendChild(document.getElementById(data));
+    }else{
+        ev.target.appendChild(document.getElementById(data));
+    }
     plus.style.display = "none";
 }
 

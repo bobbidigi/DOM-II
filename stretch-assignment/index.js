@@ -37,7 +37,6 @@ blocks.addEventListener('mousedown', (e)=>{
 
 blocks.addEventListener('mouseup', (e) =>{
   traveling = false;
-
 })
 
 
