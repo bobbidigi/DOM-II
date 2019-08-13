@@ -154,11 +154,12 @@ nav.forEach(function(item){
         event.preventDefault();
     })
     item.addEventListener("focus", myFunction);
+    function myFunction() {
+        this.style.textDecoration = "underline";
+    }
 })
 
-function myFunction() {
-    this.style.textDecoration = "underline";
-}
+
 
 TweenMax.to("#logo", 3, {
     x: 100,
