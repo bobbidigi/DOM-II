@@ -15,6 +15,7 @@
   .center;
   width: @width;
   height: @height;
+  margin: 0 auto;
   background-color: @bg-color;
   color: @font-color;
   border: 1px solid @silver;
@@ -29,4 +30,53 @@
     background: @white;
     color: @button-bg;
   }
+}
+
+//////// button animation //////////
+.btnAnimation{
+  animation: BUTTON-ANIMATION 3s ease-in-out;
+}
+@keyframes BUTTON-ANIMATION {
+  0% {
+    background: #fff;
+    color: @eastern-blue;
+  }
+  50% {
+    background: aqua;
+    color: @eastern-blue;
+  }
+  100%{
+    background: @eastern-blue;
+    color: #fff;
+  }
+}
+
+
+////////body animation///////
+.bodyAnimation {
+  animation: BODY-ANIMATION 3s ease-in-out;
+}
+
+@keyframes BODY-ANIMATION {
+  0% {
+    background: #fff;
+  }
+
+  50% {
+    background: aqua;
+  }
+
+  100% {
+    background: @eastern-blue;
+  }
+}
+
+
+.card(){
+  z-index: 0;
+  overflow: hidden;
+  background: #fff;
+  border: .5px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #000;
 }
