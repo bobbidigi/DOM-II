@@ -138,7 +138,6 @@ window.addEventListener("scroll", function () {
 //////// double click destination items ////////////////
 
 const destItems = document.querySelector('.destination-items');
-
 destItems.addEventListener('dblclick', function (e) {
     if(e.target.classList.contains("dest")){
         e.target.classList.toggle('large');
@@ -151,12 +150,15 @@ destItems.addEventListener('dblclick', function (e) {
 const nav = document.querySelectorAll(".nav-link");
 
 nav.forEach(function(item){
+    item.addEventListener('click', (event)=>{
+        event.preventDefault();
+    })
     item.addEventListener("focus", myFunction);
 })
+
 function myFunction() {
     this.style.textDecoration = "underline";
 }
-
 
 TweenMax.to("#logo", 3, {
     x: 100,
